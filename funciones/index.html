@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            /* Se inicia grid css layout*/
+            display: grid;
+            /* Se especifica el tamaño de las columnas que vamos a tener */
+            /* grid-template-columns: 25% 50% 25%;
+            /* Se especifica el tamaño de las filas que tenemos */
+            /* grid-template-rows: 300px 150px;
+            /* Se designan columnas y filas */
+            /* grid-template: filas / columnas; */
+            /* grid-template: 300px 100px 100px / 50% 200px 100px; */
+            /* Espaciado entre filas y columnas sin afectar el grid */
+            /* grid-column-gap: 30px; deprecated*/
+            column-gap: 30px;
+            /* grid-row-gap: 50px; deprecated */
+            row-gap: 50px;
+            /*Sintaxis resumida para asignar el gap*/
+            /* grid-gap: filas | columnas; deprecated */
+            gap: 10px 60px;
+            /*fracciones fr */
+            /* grid-template: 300px 100px 100px / 1fr 1fr 1fr; */
+            /* funciones */
+            grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr));
+        }
+        
+        .item {
+            background-color: lightblue;
+            padding: 10px;
+            border: 1px solid red;
+        }
+        
+        .item:nth-of-type(4) {
+            background-color: blue;
+            overflow: auto;
+            /* display: subgrid; */
+            display: grid;
+            grid-template: 50px 50px 50px / 200px 200px 200px;
+        }
+        
+        .item .item {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="item">contenido #1</div>
+        <div class="item">contenido #2</div>
+        <div class="item">contenido #3</div>
+        <div class="item">
+            <div class="item">subitem #1</div>
+            <div class="item">subitem #2</div>
+            <div class="item">subitem #3</div>
+            <div class="item">subitem #4</div>
+            <div class="item">subitem #5</div>
+        </div>
+        <div class="item">contenido #5</div>
+        <div class="item">contenido #6</div>
+        <div class="item">contenido #7</div>
+        <div class="item">contenido #8</div>
+        <div class="item">contenido #9</div>
+        <div class="item">contenido #10</div>
+        <div class="item">contenido #11</div>
+        <div class="item">contenido #12</div>
+    </section>
+
+</body>
+
+</html>
